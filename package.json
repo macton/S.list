@@ -1,0 +1,22 @@
+{
+  "name": "s.list",
+  "version": "1.0.0",
+  "description": "S.list - Lists",
+  "main": "s.list.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macton/S.list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macton/S.list/issues"
+  },
+  "homepage": "https://github.com/macton/S.list#readme",
+  "dependencies": {
+    "s": "macton/S"
+  }
+}
