@@ -25,8 +25,8 @@ var list = {
 
   back          : S.curry( function( count, list ) { return list.slice( -S.cv(count, list) ); } ),
   front         : S.curry( function( index, list ) { return list.slice( S.cv(index, list) ); } ),
-  first         : function( list ) { return list[0]; },
-  last          : function( list ) { return list[ list.length-1 ]; },
+  first         : function( list ) { list?return list[0]:null; },
+  last          : function( list ) { list?return list[ list.length-1 ]:null; },
 
   hashBy        : S.curry( function( hash, list ) { var obj = {}; list.forEach( function( value ) { pushObjField( obj, S.cv(hash,value), value ); }); return obj; } ),
   merge         : S.curry( function( a, b ) { return arr(a).concat( arr(b) ); } ),
