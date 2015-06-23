@@ -18,6 +18,7 @@ var list = {
 
   filter        : S.curry( function( fn, list ) { return list.filter(fn); } ),
   sort          : S.curry( function( fn, list ) { return list.sort( function(a,b) { return fn(a)<fn(b)?-1:(fn(a)>fn(b)?1:0); } ); } ),
+  alphaSort     : function( list ) { return list.sort(); },
 
   map           : S.curry( function( fn, list ) { return list.map( function( obj ) { return S.cv( fn, obj ); } ) } ),
   fmap          : S.curry( function( obj, list ) { return list.map( function( fn ) { return S.cv( fn, obj ); } ) } ),
