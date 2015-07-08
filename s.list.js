@@ -22,6 +22,7 @@ var list = {
 
   map           : S.curry( function( fn, list ) { return list.map( function( obj ) { return S.cv( fn, obj ); } ) } ),
   fmap          : S.curry( function( obj, list ) { return list.map( function( fn ) { return S.cv( fn, obj ); } ) } ),
+  cmap          : S.curry( function( f, g, list ) { return list.map( function( obj ) { return S.cv( S.cv(f,obj), S.cv(g,obj) ); }); } ),
 
   back          : S.curry( function( count, list ) { return list.slice( -S.cv(count, list) ); } ),
   front         : S.curry( function( index, list ) { return list.slice( S.cv(index, list) ); } ),
